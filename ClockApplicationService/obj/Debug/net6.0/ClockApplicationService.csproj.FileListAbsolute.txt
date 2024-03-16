@@ -1,0 +1,12 @@
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\bin\Debug\net6.0\ClockApplicationService.deps.json
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\bin\Debug\net6.0\ClockApplicationService.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\bin\Debug\net6.0\ClockApplicationService.pdb
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ClockApplicationService.csproj.AssemblyReference.cache
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ClockApplicationService.GeneratedMSBuildEditorConfig.editorconfig
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ClockApplicationService.AssemblyInfoInputs.cache
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ClockApplicationService.AssemblyInfo.cs
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ClockApplicationService.csproj.CoreCompileInputs.cache
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ClockApplicationService.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\refint\ClockApplicationService.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ClockApplicationService.pdb
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ref\ClockApplicationService.dll

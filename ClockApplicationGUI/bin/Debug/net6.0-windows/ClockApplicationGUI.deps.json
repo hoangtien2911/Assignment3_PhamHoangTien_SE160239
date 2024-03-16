@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ClockApplicationGUI/1.0.0": {
+        "dependencies": {
+          "ClockApplicationService": "1.0.0"
+        },
+        "runtime": {
+          "ClockApplicationGUI.dll": {}
+        }
+      },
+      "ClockApplicationService/1.0.0": {
+        "runtime": {
+          "ClockApplicationService.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClockApplicationGUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClockApplicationService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

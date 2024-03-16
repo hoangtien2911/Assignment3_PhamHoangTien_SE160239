@@ -1,0 +1,133 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationGUI\\ClockApplicationGUI.csproj": {}
+  },
+  "projects": {
+    "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationGUI\\ClockApplicationGUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationGUI\\ClockApplicationGUI.csproj",
+        "projectName": "ClockApplicationGUI",
+        "projectPath": "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationGUI\\ClockApplicationGUI.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationGUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationService\\ClockApplicationService.csproj": {
+                "projectPath": "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationService\\ClockApplicationService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationService\\ClockApplicationService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationService\\ClockApplicationService.csproj",
+        "projectName": "ClockApplicationService",
+        "projectPath": "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationService\\ClockApplicationService.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "E:\\SEMESTER6\\PRN221\\Assignment3_PhamHoangTien_SE160239\\ClockApplicationService\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
