@@ -1,0 +1,15 @@
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\bin\Debug\net6.0\ClockApplicationBO.deps.json
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\bin\Debug\net6.0\ClockApplicationBO.runtimeconfig.json
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\bin\Debug\net6.0\ClockApplicationBO.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\bin\Debug\net6.0\ClockApplicationBO.pdb
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\obj\Debug\net6.0\ClockApplicationBO.csproj.AssemblyReference.cache
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\obj\Debug\net6.0\ClockApplicationBO.GeneratedMSBuildEditorConfig.editorconfig
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\obj\Debug\net6.0\ClockApplicationBO.AssemblyInfoInputs.cache
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\obj\Debug\net6.0\ClockApplicationBO.AssemblyInfo.cs
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\obj\Debug\net6.0\ClockApplicationBO.csproj.CoreCompileInputs.cache
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\obj\Debug\net6.0\ClockApplicationBO.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\obj\Debug\net6.0\refint\ClockApplicationBO.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\obj\Debug\net6.0\ClockApplicationBO.pdb
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\obj\Debug\net6.0\ClockApplicationBO.genruntimeconfig.cache
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\obj\Debug\net6.0\ref\ClockApplicationBO.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationBO\bin\Debug\net6.0\appsettings.json

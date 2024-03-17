@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockApplicationGUI", "ClockApplicationGUI\ClockApplicationGUI.csproj", "{A3F2D579-D8FF-46C9-B5CC-67A1550525FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClockApplicationGUI", "ClockApplicationGUI\ClockApplicationGUI.csproj", "{A3F2D579-D8FF-46C9-B5CC-67A1550525FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockApplicationService", "ClockApplicationService\ClockApplicationService.csproj", "{640DF6DD-C598-4E56-B4D7-AA4F6C93DFCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClockApplicationService", "ClockApplicationService\ClockApplicationService.csproj", "{640DF6DD-C598-4E56-B4D7-AA4F6C93DFCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockApplicationBO", "ClockApplicationBO\ClockApplicationBO.csproj", "{DB21448F-9784-4282-9160-ED21F4BC22F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockApplicationDAO", "ClockApplicationDAO\ClockApplicationDAO.csproj", "{A941A4DE-B61C-4ADC-9D9B-9FBCD4F04FE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockApplicationRepo", "ClockApplicationRepo\ClockApplicationRepo.csproj", "{9547DC69-67A9-4AFF-8718-DD4DA823D9CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{640DF6DD-C598-4E56-B4D7-AA4F6C93DFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{640DF6DD-C598-4E56-B4D7-AA4F6C93DFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{640DF6DD-C598-4E56-B4D7-AA4F6C93DFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB21448F-9784-4282-9160-ED21F4BC22F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB21448F-9784-4282-9160-ED21F4BC22F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB21448F-9784-4282-9160-ED21F4BC22F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB21448F-9784-4282-9160-ED21F4BC22F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A941A4DE-B61C-4ADC-9D9B-9FBCD4F04FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A941A4DE-B61C-4ADC-9D9B-9FBCD4F04FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A941A4DE-B61C-4ADC-9D9B-9FBCD4F04FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A941A4DE-B61C-4ADC-9D9B-9FBCD4F04FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9547DC69-67A9-4AFF-8718-DD4DA823D9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9547DC69-67A9-4AFF-8718-DD4DA823D9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9547DC69-67A9-4AFF-8718-DD4DA823D9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9547DC69-67A9-4AFF-8718-DD4DA823D9CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

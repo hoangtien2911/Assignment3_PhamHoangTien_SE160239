@@ -8,20 +8,22 @@ namespace ClockApplicationService;
 
 public class AlarmService
 {
-    private DateTime alarmTime;
-    private bool isRunning;
+    private List<DateTime> alarmTimes;
     private Thread alarmThread;
+    private bool isRunning;
 
     public event EventHandler AlarmTriggered;
 
     public AlarmService()
     {
-        Reset();
+        alarmTimes = new List<DateTime>();
+        isRunning = false;
     }
 
     public void SetAlarm(DateTime time)
     {
-        alarmTime = time;
+        alarmTimes.Add(time);
+        alarmTimes.Sort();
         Start();
     }
 
@@ -30,7 +32,7 @@ public class AlarmService
         if (!isRunning)
         {
             isRunning = true;
-            alarmThread = new Thread(Alarm);
+            alarmThread = new Thread(AlarmLoop);
             alarmThread.Start();
         }
     }
@@ -38,24 +40,31 @@ public class AlarmService
     public void Stop()
     {
         isRunning = false;
-        alarmThread?.Join();
+        if (alarmThread != null && alarmThread.IsAlive)
+        {
+            alarmThread.Join();
+        }
     }
 
     public void Reset()
     {
-        alarmTime = DateTime.MinValue;
+        alarmTimes.Clear();
     }
 
-    private void Alarm()
+    private void AlarmLoop()
     {
         while (isRunning)
         {
-            if (DateTime.Now >= alarmTime)
+            DateTime now = DateTime.Now;
+            foreach (var time in alarmTimes)
             {
-                AlarmTriggered?.Invoke(this, EventArgs.Empty);
-                break;
+                if (now.Year == time.Year && now.Month == time.Month && now.Day == time.Day && now.Hour == time.Hour && now.Minute == time.Minute)
+                {
+                    AlarmTriggered?.Invoke(this, EventArgs.Empty);
+                    alarmTimes.Remove(time);
+                    break;
+                }
             }
-
             Thread.Sleep(1000); // Sleep for one second
         }
     }

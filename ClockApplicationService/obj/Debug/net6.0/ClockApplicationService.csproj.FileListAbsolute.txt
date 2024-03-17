@@ -10,3 +10,11 @@ E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\o
 E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\refint\ClockApplicationService.dll
 E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ClockApplicationService.pdb
 E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ref\ClockApplicationService.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\bin\Debug\net6.0\appsettings.json
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\bin\Debug\net6.0\ClockApplicationBO.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\bin\Debug\net6.0\ClockApplicationDAO.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\bin\Debug\net6.0\ClockApplicationRepo.dll
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\bin\Debug\net6.0\ClockApplicationRepo.pdb
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\bin\Debug\net6.0\ClockApplicationBO.pdb
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\bin\Debug\net6.0\ClockApplicationDAO.pdb
+E:\SEMESTER6\PRN221\Assignment3_PhamHoangTien_SE160239\ClockApplicationService\obj\Debug\net6.0\ClockApplicationService.csproj.CopyComplete

@@ -1,7 +1,10 @@
-﻿using ClockApplicationService;
+﻿using ClockApplicationBO.Models;
+using ClockApplicationRepo;
+using ClockApplicationService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,12 +26,24 @@ namespace ClockApplicationGUI
     {
         private CountdownService countdownService;
         private AlarmService alarmService;
+        private AlarmRepo alarmRepo;
 
         public MainWindow()
         {
             InitializeComponent();
             InitializeCountdownService();
             InitializeAlarmService();
+            alarmRepo = new AlarmRepo();
+            var alrmList = alarmRepo.GetAll();
+            alarmDataGrid.ItemsSource = alrmList;
+            dpAlarmDate.SelectedDate = DateTime.Today;
+            alrmList.ForEach(alarm =>
+            {
+                if (alarm.Enabled)
+                {
+                    alarmService.SetAlarm(alarm.AlarmTime);
+                }
+            });            
         }
 
         private void InitializeAlarmService()
@@ -48,11 +63,53 @@ namespace ClockApplicationGUI
         {
             int hours = int.Parse(txtAlarmHours.Text);
             int minutes = int.Parse(txtAlarmMinutes.Text);
+            var alarmName = txtAlarmName.Text;
             DateTime alarmTime = dpAlarmDate.SelectedDate.Value.Date.AddHours(hours).AddMinutes(minutes);
-            alarmService = new AlarmService();
-            alarmService.AlarmTriggered += AlarmService_AlarmTriggered;
+            Alarm alarm = new Alarm
+            {
+                AlarmName = alarmName,
+                AlarmTime = alarmTime,
+                Enabled = true
+            };
+            alarmRepo.Create(alarm);
+            
+            alarmDataGrid.ItemsSource = alarmRepo.GetAll();
             alarmService.SetAlarm(alarmTime);
         }
+
+        private void enableDisableButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            Alarm alarm = clickedButton.DataContext as Alarm;
+            alarm.Enabled = !alarm.Enabled;
+            alarmRepo.Update(alarm);
+            var alrmList = alarmRepo.GetAll();
+            alarmDataGrid.ItemsSource = alrmList;
+            alarmService = new AlarmService();            
+            alrmList.ForEach(alarm =>
+            {
+                if (alarm.Enabled)
+                {
+                    alarmService.SetAlarm(alarm.AlarmTime);
+                }
+            });
+        }
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            Alarm alarm = clickedButton.DataContext as Alarm;
+            alarmRepo.Remove(alarm);
+            var alrmList = alarmRepo.GetAll();
+            alarmDataGrid.ItemsSource = alrmList;
+            alarmService = new AlarmService();            
+            alrmList.ForEach(alarm =>
+            {
+                if (alarm.Enabled)
+                {
+                    alarmService.SetAlarm(alarm.AlarmTime);
+                }
+            });
+        }        
 
         private void AlarmService_AlarmTriggered(object sender, EventArgs e)
         {

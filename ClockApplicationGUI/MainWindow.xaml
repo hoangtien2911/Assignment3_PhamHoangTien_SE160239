@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ClockApplicationGUI"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:ClockApplicationGUI"        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="900">
     <Grid>
         <TabControl>
             <!-- Countdown Tab -->
@@ -38,9 +39,15 @@
             <!-- Alarm Tab -->
             <TabItem Header="Alarm">
                 <Grid>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0" Height="200">
-                        <DatePicker x:Name="dpAlarmDate" Width="264" Margin="0,0,0,10"/>
-                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Width="264">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0" Height="220">
+                        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="Alarm Name:" />
+                        <TextBox x:Name="txtAlarmName" Margin="0, 0, 0, 10" />
+                        <DatePicker x:Name="dpAlarmDate" Width="172" Margin="0,0,0,10"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Width="172">
                             <TextBox x:Name="txtAlarmHours" Width="80" Height="80" FontSize="55" Text="00" 
                          VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                          PreviewTextInput="TextBox_PreviewTextInput"/>
@@ -52,6 +59,37 @@
 
                         <Button x:Name="btnSetAlarm" Content="Set Alarm" Width="150" Margin="10" Click="btnSetAlarm_Click" />
                     </StackPanel>
+                    <DataGrid  x:Name="alarmDataGrid" RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Style="{DynamicResource DataGridStyle1}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Alarm Name" Binding="{Binding AlarmName}" IsReadOnly="True" Width="*"/>
+                            <DataGridTextColumn Header="Alarm Time" Binding="{Binding AlarmTime}" IsReadOnly="True" Width="*"/>
+                            <DataGridCheckBoxColumn Header="Enabled" Binding="{Binding Enabled}" IsReadOnly="True" Width="*"/>
+                            <DataGridTemplateColumn Header="Operations" IsReadOnly="True" Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button Click="enableDisableButton_Click" Style="{StaticResource gridEditButton}" Margin="0, 0, 10, 0">
+                                                <Button.ToolTip>
+                                                    <ToolTip>
+                                                        <TextBlock Text="Enable/Disable" />
+                                                    </ToolTip>
+                                                </Button.ToolTip>
+                                                <Icon:PackIconMaterial Kind="Publish" Style="{StaticResource gridButtonIcon}"/>
+                                            </Button>
+                                            <Button Click="deleteButton_Click" Style="{StaticResource gridEditButton}">
+                                                <Button.ToolTip>
+                                                    <ToolTip>
+                                                        <TextBlock Text="Delete" />
+                                                    </ToolTip>
+                                                </Button.ToolTip>
+                                                <Icon:PackIconMaterial Kind="Delete" Style="{StaticResource gridButtonIcon}"/>
+                                            </Button>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
             </TabItem>
         </TabControl>
