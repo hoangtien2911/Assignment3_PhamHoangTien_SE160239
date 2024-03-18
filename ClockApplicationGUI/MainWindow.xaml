@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="900">
     <Grid>
-        <TabControl>
+        <TabControl Background="AliceBlue">
             <!-- Countdown Tab -->
             <TabItem Header="Countdown">
                 <Grid>
