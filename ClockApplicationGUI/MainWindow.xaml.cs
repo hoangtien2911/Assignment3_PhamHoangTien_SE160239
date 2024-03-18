@@ -37,13 +37,8 @@ namespace ClockApplicationGUI
             var alrmList = alarmRepo.GetAll();
             alarmDataGrid.ItemsSource = alrmList;
             dpAlarmDate.SelectedDate = DateTime.Today;
-            alrmList.ForEach(alarm =>
-            {
-                if (alarm.Enabled)
-                {
-                    alarmService.SetAlarm(alarm.AlarmTime);
-                }
-            });            
+            List<DateTime> alarmTimes = alrmList.Where(alarm => alarm.Enabled).Select(alarm => alarm.AlarmTime).ToList();
+            alarmService.SetAlarm(alarmTimes);
         }
 
         private void InitializeAlarmService()
@@ -64,6 +59,11 @@ namespace ClockApplicationGUI
             int hours = int.Parse(txtAlarmHours.Text);
             int minutes = int.Parse(txtAlarmMinutes.Text);
             var alarmName = txtAlarmName.Text;
+            if (string.IsNullOrEmpty(alarmName))
+            {
+                MessageBox.Show("Please input alarm name!");
+                return;
+            }
             DateTime alarmTime = dpAlarmDate.SelectedDate.Value.Date.AddHours(hours).AddMinutes(minutes);
             Alarm alarm = new Alarm
             {
@@ -72,9 +72,13 @@ namespace ClockApplicationGUI
                 Enabled = true
             };
             alarmRepo.Create(alarm);
-            
-            alarmDataGrid.ItemsSource = alarmRepo.GetAll();
-            alarmService.SetAlarm(alarmTime);
+            var alrmList = alarmRepo.GetAll();
+            alarmDataGrid.ItemsSource = alrmList;            
+            alarmService.Stop();
+            alarmService.ResetAlarmTrigger();
+            alarmService.AlarmTriggered += AlarmService_AlarmTriggered;
+            List<DateTime> alarmTimes = alrmList.Where(alarm => alarm.Enabled && alarm.AlarmTime > DateTime.Now).Select(alarm => alarm.AlarmTime).ToList();
+            alarmService.SetAlarm(alarmTimes);
         }
 
         private void enableDisableButton_Click(object sender, RoutedEventArgs e)
@@ -84,15 +88,12 @@ namespace ClockApplicationGUI
             alarm.Enabled = !alarm.Enabled;
             alarmRepo.Update(alarm);
             var alrmList = alarmRepo.GetAll();
-            alarmDataGrid.ItemsSource = alrmList;
-            alarmService = new AlarmService();            
-            alrmList.ForEach(alarm =>
-            {
-                if (alarm.Enabled)
-                {
-                    alarmService.SetAlarm(alarm.AlarmTime);
-                }
-            });
+            alarmDataGrid.ItemsSource = alrmList;            
+            alarmService.Stop();
+            alarmService.ResetAlarmTrigger();
+            alarmService.AlarmTriggered += AlarmService_AlarmTriggered;
+            List<DateTime> alarmTimes = alrmList.Where(alarm => alarm.Enabled).Select(alarm => alarm.AlarmTime).ToList();
+            alarmService.SetAlarm(alarmTimes);
         }
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
@@ -100,20 +101,17 @@ namespace ClockApplicationGUI
             Alarm alarm = clickedButton.DataContext as Alarm;
             alarmRepo.Remove(alarm);
             var alrmList = alarmRepo.GetAll();
-            alarmDataGrid.ItemsSource = alrmList;
-            alarmService = new AlarmService();            
-            alrmList.ForEach(alarm =>
-            {
-                if (alarm.Enabled)
-                {
-                    alarmService.SetAlarm(alarm.AlarmTime);
-                }
-            });
+            alarmDataGrid.ItemsSource = alrmList;            
+            alarmService.Stop();
+            alarmService.ResetAlarmTrigger();
+            alarmService.AlarmTriggered += AlarmService_AlarmTriggered;
+            List<DateTime> alarmTimes = alrmList.Where(alarm => alarm.Enabled).Select(alarm => alarm.AlarmTime).ToList();
+            alarmService.SetAlarm(alarmTimes);
         }        
 
         private void AlarmService_AlarmTriggered(object sender, EventArgs e)
         {
-            MessageBox.Show("Alarm triggered!");
+            MessageBox.Show("Ting ting ting!");
         }
 
         private void CountdownService_TimeChanged(object sender, string time)
@@ -134,9 +132,23 @@ namespace ClockApplicationGUI
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            int hours = int.Parse(txtHours.Text);
-            int minutes = int.Parse(txtMinutes.Text);
-            int seconds = int.Parse(txtSeconds.Text);
+            int hours;
+            if(!int.TryParse(txtHours.Text, out hours)) {
+                MessageBox.Show("Please input hour!");
+                return;
+            }
+            int minutes;
+            if (!int.TryParse(txtMinutes.Text, out minutes))
+            {
+                MessageBox.Show("Please input minute!");
+                return;
+            }
+            int seconds;
+            if (!int.TryParse(txtSeconds.Text, out seconds))
+            {
+                MessageBox.Show("Please input second!");
+                return;
+            }
 
             if (countdownService != null)
             {

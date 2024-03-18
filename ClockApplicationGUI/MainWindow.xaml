@@ -12,7 +12,11 @@
             <!-- Countdown Tab -->
             <TabItem Header="Countdown">
                 <Grid>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0" Height="135">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="103*"/>
+                        <ColumnDefinition Width="791*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="164,190,0,0" Height="135" Grid.Column="1">
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Width="264">
                             <TextBox x:Name="txtHours" Width="80" Height="80" FontSize="55" Text="00" 
                                      VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
@@ -28,9 +32,9 @@
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
-                            <Button x:Name="btnStart" Content="Start" Width="100" Margin="10" Click="btnStart_Click" />
-                            <Button x:Name="btnStop" Content="Stop" Width="100" Margin="10" Click="btnStop_Click" />
-                            <Button x:Name="btnReset" Content="Reset" Width="100" Margin="10" Click="btnReset_Click" />
+                            <Button x:Name="btnStart" Content="Start" Width="100" Margin="10" Click="btnStart_Click" Style="{StaticResource searchButton}"/>
+                            <Button x:Name="btnStop" Content="Stop" Width="100" Margin="10" Click="btnStop_Click" Style="{StaticResource searchButton}"/>
+                            <Button x:Name="btnReset" Content="Reset" Width="100" Margin="10" Click="btnReset_Click" Style="{StaticResource searchButton}"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -57,7 +61,7 @@
                          PreviewTextInput="TextBox_PreviewTextInput"/>
                         </StackPanel>
 
-                        <Button x:Name="btnSetAlarm" Content="Set Alarm" Width="150" Margin="10" Click="btnSetAlarm_Click" />
+                        <Button x:Name="btnSetAlarm" Content="Set Alarm" Width="150" Margin="10" Click="btnSetAlarm_Click" Style="{StaticResource searchButton}"/>
                     </StackPanel>
                     <DataGrid  x:Name="alarmDataGrid" RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Style="{DynamicResource DataGridStyle1}">
                         <DataGrid.Columns>

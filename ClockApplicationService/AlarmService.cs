@@ -17,12 +17,20 @@ public class AlarmService
     public AlarmService()
     {
         alarmTimes = new List<DateTime>();
+        isRunning = false;        
+    }
+
+    public void ResetAlarmTrigger()
+    {
+        AlarmTriggered = null;
+        alarmTimes = new List<DateTime>();
+        alarmThread = null;
         isRunning = false;
     }
 
-    public void SetAlarm(DateTime time)
+    public void SetAlarm(List<DateTime> timeList)
     {
-        alarmTimes.Add(time);
+        alarmTimes.AddRange(timeList);
         alarmTimes.Sort();
         Start();
     }
